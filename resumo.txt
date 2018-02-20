@@ -41,6 +41,9 @@ Configuração do log4j
 A configuração do log4j é geralmente feita em um arquivo chamado log4j.properties.
 
 Sintaxe
-logger=logging level, appender
+logger=logging level, appenders
+
+log4j.appender - prefixo comum a todos os appenders no Log4j
+
 
 
