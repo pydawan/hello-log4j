@@ -1,0 +1,46 @@
+log4j
+
+O Logging consiste no registro de informações durante a execução de uma aplicação
+principalmente para fins de auditoria.
+
+É uma atividade extramemente importante e complementar ao debugging (depuração).
+
+Pontos importantes:
+1 - As informações a serem auditadas são classificadas por níveis de prioridade.
+1.1 - São os Logging Levels do log4j.
+
+2 - As informações podem ser registradas em locais ou repositórios diferentes (arquivo, e-mail, banco de dados).
+2.1 - São os Appenders do log4j.
+
+3 - Loggers são responsáveis por coletar informações e disponibilizá-las aos appenders para fins de registro.
+
+4 - RootLogger (Registrador Base)
+4.1 - Define o nível de registro de informações (logging level) comum a todos os appenders (anexadores ou registradores).
+4.2 - Só existe um RootLogger.
+4.3 - Todos os loggers herdam os atributos do RootLogger e também podem alterá-los.
+
+Log Level                    Priority Order
+FATAL                        High
+ERROR
+INFO
+WARN
+DEBUG                        Low
+
+
+ALL   -  todos logging levels incluindo os levels personalizados (custom levels).
+DEBUG -  descreve eventos com informações sensíveis (maior detalhamento) e que são úteis para fins de depuração (debug) da aplicação.
+ERROR -  descreve eventos de erro que não impedem a aplicação de continuar executando.
+FATAL -  descreve eventos de erro muito graves que poderão abortar a execução da aplicação.
+INFO  -  descreve mensagens informativas que destacam o progresso da aplicação em nível genérico (menor detalhamento).
+OFF   -  o maior grau possível e destina-se a desabilitar o registro de eventos da aplicação (logging).
+TRACE -  descreve eventos informativos com melhor grau de detalhamento que DEBUG.
+WARN  -  descreve eventos (situações) potencialmente prejudiciais.
+
+
+Configuração do log4j
+A configuração do log4j é geralmente feita em um arquivo chamado log4j.properties.
+
+Sintaxe
+logger=logging level, appender
+
+
