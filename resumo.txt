@@ -5,6 +5,25 @@ principalmente para fins de auditoria.
 
 É uma atividade extramemente importante e complementar ao debugging (depuração).
 
+Objetos principais:
+
+Logger Object
+Appender Object
+Layout Object
+
+Arquitetura simplificada:
+
+------------------------------------------------------------------------
+Java Program
+                                               Destination
+                                                   ^
+                                                   |
+    Logging Information -> Logger Object -> Appender Object
+                                                   ^
+                                                   |
+                                               Layout Object
+------------------------------------------------------------------------
+
 Pontos importantes:
 1 - As informações a serem auditadas são classificadas por níveis de prioridade.
 1.1 - São os Logging Levels do log4j.
